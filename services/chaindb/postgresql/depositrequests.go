@@ -41,7 +41,7 @@ func (s *Service) DepositRequests(ctx context.Context, filter *chaindb.DepositRe
 
 	// Build the query.
 	queryBuilder := strings.Builder{}
-	queryVals := make([]interface{}, 0)
+	queryVals := make([]any, 0)
 
 	queryBuilder.WriteString(`
 SELECT f_block_root
